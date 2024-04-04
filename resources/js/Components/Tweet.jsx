@@ -47,6 +47,9 @@ export default function Tweet({ tweet }) {
                                 <button className="block w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 transition duration-150 ease-in-out hover:bg-gray-100 focus:bg-gray-100" onClick={() => setEditing(true)}>
                                     Edit
                                 </button>
+                                <Dropdown.Link as="button" href={route('tweets.destroy', tweet.id)} method="delete">
+                                    Delete
+                                </Dropdown.Link>
                             </Dropdown.Content>
                         </Dropdown>
                     }
